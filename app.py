@@ -19,7 +19,7 @@ data = pd.concat([orders_df, customer_df], axis=1)
 
 
 @app.route('/', methods=['GET', 'POST'])
-def dashboard():
+def index():
     order_data = None
     error = None
     product_names = data['Product_name'].unique()
