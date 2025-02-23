@@ -5,7 +5,7 @@ from flask import Flask, redirect, request, render_template, url_for
 from utils import generate_summaries ,analyze_sentiment
 import plotly.express as px
 
-app = Flask(__name__)
+app = Flask(__name__, static_folder='static')
 
 # Load the Excel file as a DataFrame
 orders_df = pd.read_excel("C://Users//lenovo//OneDrive//Desktop//dashboard//Product_Details.xlsx")
